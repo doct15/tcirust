@@ -1,0 +1,107 @@
+bmcgehee/tcirust:
+  ############################################################
+  # The Distelli Manifest Reference
+  #    distelli-manifest.yml
+  #
+  # Read more about Distelli Manifests at:
+  #  http://www.distelli.com/docs/distelli-manifest-reference
+  #
+  # The first line must be your:
+  # distelli username (not email)
+  # application name
+  #
+  # as shown above:
+  # USERNAME/APPLICATIONNAME:
+  #
+  ############################################################
+
+  Env:
+    - REPO_TYPE: Git
+    ##########################################################
+    # The Env: Section is where you define 
+    #  your environment variables
+    # One variable REPO_TYPE has been defined above
+    #
+    # Read more about Distelli Environment Variables at:
+    #  https://www.distelli.com/docs/distelli-variables-reference
+    # 
+    # You may need to define others. for example:
+    #- SOURCE_DIR: src
+    #- BIN_DIR: bin
+    #- PORT: 8002
+    #
+    ##########################################################
+
+  PkgInclude:
+    - '*'
+    ##########################################################
+    # The PkgInclude: Section is where you define
+    #  the files and directories in your application
+    #  that should be bundled for pushs and deploys
+    #
+    # The '*' will pick up all files and directories
+    #
+    # Example: Get the file server.go
+    #- 'src/server.go'
+    #
+    ##########################################################
+
+  PreInstall:
+    - echo "Begin PreInstall"
+    ##########################################################
+    # The PreInstall: Section occurs before Install
+    # 
+    # This section is great for download or installing
+    #  prerequisites.
+    #
+    # For example you may want to install prerequisites
+    # Ubuntu
+    #- sudo apt-get -y update
+    #- sudo apt-get -y install golang
+    # CentOS
+    #- sudo yum -y install golang
+    #
+    ##########################################################
+
+  PostInstall:
+    - echo "Begin PostInstall"
+    ##########################################################
+    # The PostInstall: Section occurs after Install
+    #
+    # During the Install Distelli downloads and decompresses
+    #  the application. Which includes files indicated by
+    #  the PkgInclude: section.
+    # Now that the files are available you can interact
+    #  with them.
+    #
+    # Build your 'go' code
+    #- build -o bin/server src/server.go
+    #
+    # Uncompress a tar package
+    #- tar -xzvf example.tar.gz --strip 1 -C /var/www
+    #
+    # Open Firewall Rules on Windows
+    #- netsh advfirewall firewall add rule name="TCP Port %PORT%" dir=in action=allow protocol=TCP localport=%PORT%
+    #- netsh advfirewall firewall add rule name="TCP Port %PORT%" dir=out action=allow protocol=TCP localport=%PORT%
+    #
+    # Symlink files to your webserver
+    #- sudo ln -sf $DISTELLI_APPHOME/webapp/ /usr/share/nginx/html/
+    #
+    ##########################################################
+
+  Exec:
+    - echo "Begin Exec"
+    ##########################################################
+    # The Exec: Section executes the application
+    # 
+    # The Distelli Agent watches this process and ensures 
+    #  that if it stops, it is restarted.
+    #
+    # Start your go applicaiton
+    #- exec ./bin/server $PORT
+    #
+    # You may want to use the distelli-manifest.yml 
+    #  Start: section instead of Exec: if you are starting a
+    #  daemon or service.
+    #
+    ##########################################################
