@@ -1,4 +1,4 @@
-pub fn add_numbers(a: i32, b: i32) -> i32 {
+pub fn add_numbers(a: int, b: int) -> int {
     a + b
 }
 
