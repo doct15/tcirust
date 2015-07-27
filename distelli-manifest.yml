@@ -16,8 +16,11 @@ bmcgehee/tcirust:
   ############################################################
 
   PreRelease:
-    - echo "Begin PreRelease"
-    - curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    #- echo "Begin PreRelease"
+    #- curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    - sudo add-apt-repository ppa:hansjorg/rust
+    - sudo apt-get -y update
+    - sudo apt-get -y install rust-nightly
     - cargo build --verbose
     - cargo test --verbose
 
