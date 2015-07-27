@@ -16,7 +16,8 @@ bmcgehee/tcirust:
   ############################################################
 
   PreRelease:
-    #- echo "Begin PreRelease"
+    - echo "Begin PreRelease"
+    - uname -a
     #- curl -sSf https://static.rust-lang.org/rustup.sh | sh
     - sudo apt-get -y update
     - sudo add-apt-repository -y ppa:hansjorg/rust
