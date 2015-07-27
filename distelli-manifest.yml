@@ -28,6 +28,7 @@ bmcgehee/tcirust:
     - pwd
     - cd cargo
     - pwd
+    - python --version
     - python src/etc/install-deps.py
     - ./configure --local-rust-root="$PWD"/rustc
     - make
