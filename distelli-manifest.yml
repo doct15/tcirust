@@ -22,7 +22,13 @@ bmcgehee/tcirust:
     - sudo apt-get -y update
     - sudo add-apt-repository -y ppa:hansjorg/rust
     - sudo apt-get -y update
-    - sudo apt-get -y --force-yes install rust-nightly
+    - sudo apt-get -y --force-yes install rust-stable
+    - git clone https://github.com/rust-lang/cargo
+    - cd cargo
+    - python src/etc/install-deps.py
+    - ./configure --local-rust-root="$PWD"/rustc
+    - make
+    - sudo make install
     - cargo build --verbose
     - cargo test --verbose
 
