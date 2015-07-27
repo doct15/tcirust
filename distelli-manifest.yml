@@ -16,6 +16,7 @@ bmcgehee/tcirust:
   ############################################################
 
   PreRelease:
+    - echo "Begin PreRelease"
     - curl -sSf https://static.rust-lang.org/rustup.sh | sh
     - cargo build --verbose
     - cargo test --verbose
