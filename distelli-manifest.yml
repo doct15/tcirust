@@ -23,6 +23,7 @@ bmcgehee/tcirust:
     - sudo apt-get -y update
     - sudo apt-get -y install curl
     - sudo apt-get -y install cmake
+    - sudo apt-get -y install libssl-dev
     - sudo add-apt-repository -y ppa:hansjorg/rust
     - sudo apt-get -y update
     - sudo apt-get -y --force-yes install rust-stable
