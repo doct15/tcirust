@@ -18,6 +18,7 @@ bmcgehee/tcirust:
   PreRelease:
     - echo "Begin PreRelease"
     - uname -a
+    - curl --version
     #- curl -sSf https://static.rust-lang.org/rustup.sh | sh
     - sudo apt-get -y update
     - sudo apt-get -y install cmake
