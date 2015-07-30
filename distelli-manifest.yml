@@ -1,5 +1,8 @@
 bmcgehee/tcirust:
 
+  PkgInclude:
+    - '*'
+
   PreRelease:
     - echo "Begin PreRelease"
     - uname -a
@@ -16,9 +19,6 @@ bmcgehee/tcirust:
     - RepoPath: .
 
   Env:
-
-  PkgInclude:
-    - '*'
 
   PreInstall:
     - echo "Begin PreInstall"
