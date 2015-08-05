@@ -1,5 +1,3 @@
-[package]
-name = "hello_world"
-version = "0.1.0"
-authors = ["Your Name <you@example.com>"]
-
+fn main() {
+    println!("Hello, world!");
+}
