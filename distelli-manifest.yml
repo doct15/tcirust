@@ -31,6 +31,7 @@ bmcgehee/tcirust:
   PostInstall:
     - echo "Begin PostInstall"
 
-  Exec:
-    - echo "Begin Exec"
+  Start:
+    - echo "Begin Start"
+    - ./target/debug/hello_world
 
