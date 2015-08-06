@@ -11,9 +11,6 @@ bmcgehee/tcirust:
     - sudo apt-get -y --force-yes install cargo-nightly
     - cargo build --verbose
     - cargo test --verbose
-  CommitData:
-    - RepoType: Git 
-    - RepoPath: .
   PreInstall:
     - echo "Begin PreInstall"
     - sudo add-apt-repository -y ppa:hansjorg/rust
