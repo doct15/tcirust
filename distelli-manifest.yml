@@ -16,7 +16,7 @@ bmcgehee/tcirust:
     - echo "----"
     - ls -al
     - ls -al ./.distelli/
-    - cat ././distelli/pre-release.sh
+    - cat ./distelli/pre-release.sh
   CommitData:
     - RepoType: Git 
     - RepoPath: .
