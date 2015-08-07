@@ -15,7 +15,8 @@ bmcgehee/tcirust:
     - cat distelli-manifest.yml
     - echo "----"
     - ls -al
-    #- cat pre-release.sh
+    - ls -al ./.distelli/
+    - cat ././distelli/pre-release.sh
   CommitData:
     - RepoType: Git 
     - RepoPath: .
