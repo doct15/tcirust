@@ -14,7 +14,7 @@ bmcgehee/tcirust:
     - pwd
     - cat distelli-manifest.yml
     - echo "----"
-    - ls -l
+    - ls -al
     #- cat pre-release.sh
   CommitData:
     - RepoType: Git 
