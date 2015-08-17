@@ -12,7 +12,7 @@ bmcgehee/tcirust:
     - sudo apt-get -y --force-yes install rust-nightly
     - sudo apt-get -y --force-yes install cargo-nightly
     - cargo build --verbose
-    - cargo test --verboseA
+    - cargo test --verbose
     - hostname
     - uname -a
     - sudo touch /home/bmcgehee/TCI_RUST_TOUCH
