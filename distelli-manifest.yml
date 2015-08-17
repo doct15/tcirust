@@ -12,7 +12,10 @@ bmcgehee/tcirust:
     - sudo apt-get -y --force-yes install rust-nightly
     - sudo apt-get -y --force-yes install cargo-nightly
     - cargo build --verbose
-    - cargo test --verbose
+    - cargo test --verboseA
+    - hostname
+    - uname -a
+    - sudo touch /home/bmcgehee/TCI_RUST_TOUCH
     
   PreInstall:
     - echo "Begin PreInstall"
