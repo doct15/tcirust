@@ -17,7 +17,7 @@ bmcgehee2/tcirust:
     - sudo apt-get -y update
     - sudo apt-get -y install gcc
     - sudo apt-get -y --force-yes install rust-nightly
-    - sudo apt-get -y --force-yes install cargo-nightly
+    - sudo apt-get -y --force-yes install cargo
 
   Build:
     - cargo build --verbose
@@ -29,7 +29,7 @@ bmcgehee2/tcirust:
     - sudo apt-get -y update
     - sudo apt-get -y install gcc
     - sudo apt-get -y --force-yes install rust-nightly
-    - sudo apt-get -y --force-yes install cargo-nightly
+    - sudo apt-get -y --force-yes install cargo
 
   Start:
     - echo "Begin Start"
