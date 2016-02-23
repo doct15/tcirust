@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+bmcgehee2/tcirust:
+  ############################################################
+  # The Distelli Manifest Reference
+  #    distelli-manifest.yml
+  #
+  # Read more about Distelli Manifests at:
+  #  http://www.distelli.com/docs/distelli-manifest-reference
+  #
+  # The first line must be your:
+  # distelli username (not email)
+  # application name
+  #
+  # as shown above:
+  # USERNAME/APPLICATIONNAME:
+  #
+  ############################################################
+
+  Env:
+    - REPO_TYPE: Git
+    ##########################################################
+    # The Env: Section is where you define 
+    #  your environment variables
+    # One variable REPO_TYPE has been defined above
+    #
+    # Read more about Distelli Environment Variables at:
+    #  https://www.distelli.com/docs/distelli-variables-reference
+    # 
+    # You may need to define others. for example:
+    #- SOURCE_DIR: src
+    #- BIN_DIR: bin
+    #- PORT: 8002
+    #
+    ##########################################################
+
+  PkgInclude:
+    - '*'
+    ##########################################################
+    # The PkgInclude: Section is where you define
+    #  the files and directories in your application
+    #  that should be bundled for pushs and deploys
+    #
+    # The '*' will pick up all files and directories
+    #
+    # Example: Get the file server.go
+    #- 'src/server.go'
+    #
+    ##########################################################
+
+  ReleaseNotes:
+    - echo "Release Notes"
+    - ls -l
+    - echo "Alex is Cool"
+
+=======
+bmcgehee/tcirust:
+  PkgInclude:
+    - '*'
+  CommitData:
+    - RepoType: Git 
+    - RepoPath: .
+    
+  PreRelease:
+    - echo "Begin PreInstall"
+    - sudo add-apt-repository -y ppa:hansjorg/rust
+    - sudo apt-get -y update
+    - sudo apt-get -y install gcc
+    - sudo apt-get -y --force-yes install rust-nightly
+    - sudo apt-get -y --force-yes install cargo-nightly
+    - cargo build --verbose
+    - cargo test --verbose
+    
+>>>>>>> b9c08c9acca90b3bea8e1c8125eea6a86e00aad7
+  PreInstall:
+    - echo "Begin PreInstall"
+    - sudo add-apt-repository -y ppa:hansjorg/rust
+    - sudo apt-get -y update
+    - sudo apt-get -y install gcc
+    - sudo apt-get -y --force-yes install rust-nightly
+    - sudo apt-get -y --force-yes install cargo-nightly
+
+  Start:
+    - echo "Begin Start"
+    - ./target/debug/hello_world
+
+

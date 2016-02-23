@@ -1,7 +1,7 @@
 [package]
-name = "traviscirustexample"
-version = "0.0.1"
-authors = [ "Henrik Hodne <henrik@travis-ci.com>" ]
+name = "hello_world"
+version = "0.1.0"
+authors = ["Brian McGehee <bmcgehee@distelli.com>"]
 
 [lib]
-name = "traviscirustexample"
+name = "hello_world"
