@@ -3,9 +3,6 @@ bmcgehee2/tcirust:
   Env:
     - REPO_TYPE: Git
 
-  PkgInclude:
-    - '*'
-
   ReleaseNotesCmd:
     - echo "Release Notes"
     - ls -l
