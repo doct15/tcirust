@@ -1,4 +1,4 @@
-bmcgehee/tcirust:
+bmcgehee2/tcirust:
   ############################################################
   # The Distelli Manifest Reference
   #    distelli-manifest.yml
@@ -45,6 +45,11 @@ bmcgehee/tcirust:
     #- 'src/server.go'
     #
     ##########################################################
+
+  ReleaseNotes:
+    - echo "Release Notes"
+    - ls -l
+    - echo "Alex is Cool"
 
   PreInstall:
     - echo "Begin PreInstall"
