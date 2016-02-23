@@ -47,7 +47,7 @@ bmcgehee2/tcirust:
     #
     ##########################################################
 
-  ReleaseNotes:
+  ReleaseNotesCmd:
     - echo "Release Notes"
     - ls -l
     - echo "Alex is Cool"
