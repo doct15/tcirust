@@ -1,4 +1,4 @@
-bmcgehee2/tcirust:  
+bmcgehee/tcirust:  
 
   Env:
     - REPO_TYPE: Git
