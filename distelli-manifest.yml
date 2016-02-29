@@ -18,7 +18,7 @@ bmcgehee/tcirust:
     #- sudo apt-get -y install gcc
     #- sudo apt-get -y --force-yes install rust-nightly
     #- sudo apt-get -y --force-yes install cargo-nightly
-    - curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    - curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --yes
 
   Build:
     - cargo build --verbose
