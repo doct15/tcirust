@@ -23,6 +23,7 @@ bmcgehee/tcirust:
   Build:
     - cargo build --verbose
     - cargo test --verbose
+    - zach sucks
     
   PreInstall:
     - echo "Begin PreInstall"
